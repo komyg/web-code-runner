@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "web-code-runner-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,7 +17,12 @@
     "@typescript-eslint/parser": "^8.4.0",
     "nodemon": "^3.1.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "@eslint/js": "^9.9.0",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "typescript-eslint": "^8.0.1",
+    "prettier": "^3.3.3"
   },
   "dependencies": {
     "fastify": "^4.28.1"
