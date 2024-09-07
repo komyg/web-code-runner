@@ -1,5 +1,7 @@
+import 'dotenv/config';
 import Fastify, { FastifyInstance, RouteShorthandOptions } from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
+import { registerCodeRunnerRoutes } from './code-runner/code-runner.router';
 
 const server: FastifyInstance = Fastify({});
 
@@ -21,6 +23,8 @@ const opts: RouteShorthandOptions = {
 server.get('/', opts, async (request, reply) => {
   return { healthy: true };
 });
+
+registerCodeRunnerRoutes(server);
 
 const start = async () => {
   try {
