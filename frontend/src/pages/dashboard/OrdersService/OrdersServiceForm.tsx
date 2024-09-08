@@ -1,8 +1,10 @@
 import { Box, Button, TextField } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import { useUpdateService } from './useUpdateService';
 
 interface Props {
+  serviceId: string;
   numReplicas: number;
 }
 
@@ -13,16 +15,17 @@ const validationSchema = yup.object({
     .min(1, 'Number of replicas must be greater than 0'),
 });
 
-export function OrdersServiceForm({ numReplicas }: Props) {
+export function OrdersServiceForm({ numReplicas, serviceId }: Props) {
   const formik = useFormik({
     initialValues: {
       numReplicas,
     },
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
+      updateService(serviceId, values);
     },
   });
+  const { loading, updateService } = useUpdateService();
 
   return (
     <form onSubmit={formik.handleSubmit}>
@@ -40,7 +43,7 @@ export function OrdersServiceForm({ numReplicas }: Props) {
           }
           helperText={formik.touched.numReplicas && formik.errors.numReplicas}
         />
-        <Button type="submit" variant="contained">
+        <Button type="submit" variant="contained" disabled={loading}>
           Update
         </Button>
       </Box>

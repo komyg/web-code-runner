@@ -12,7 +12,10 @@ export function OrdersService({ serviceData }: Props) {
       <Typography variant="h6">{serviceData.serviceName}</Typography>
       <Typography>Service ID: {serviceData.serviceId}</Typography>
       <Typography>Status: {serviceData.status}</Typography>
-      <OrdersServiceForm numReplicas={serviceData.numReplicas} />
+      <OrdersServiceForm
+        numReplicas={serviceData.numReplicas}
+        serviceId={serviceData.serviceId}
+      />
     </Box>
   );
 }
