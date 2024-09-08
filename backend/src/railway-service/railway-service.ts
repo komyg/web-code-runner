@@ -37,3 +37,21 @@ export async function removeRunnerDeployment() {
     })
     .toPromise();
 }
+
+export async function updateNumReplicas(
+  serviceId: string,
+  numReplicas: number
+) {
+  const document = gql`
+    mutation ServiceInstanceUpdate($numReplicas: Int!, $serviceId: String!) {
+      serviceInstanceUpdate(
+        input: { numReplicas: $numReplicas }
+        serviceId: $serviceId
+      )
+    }
+  `;
+
+  return railwayClient
+    .mutation(document, { numReplicas, serviceId })
+    .toPromise();
+}
