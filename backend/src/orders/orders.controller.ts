@@ -8,7 +8,6 @@ export async function getOrderStats(
 ) {
   const startDate = parseISO((request.query as any).startDate);
   const endDate = parseISO((request.query as any).endDate);
-  console.log('parsed');
   const data = await getOrderStatistics(startDate, endDate);
   reply.send(data);
 }

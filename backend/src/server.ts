@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import cors from '@fastify/cors';
 import Fastify, { FastifyInstance, RouteShorthandOptions } from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
 import { registerCodeRunnerRoutes } from './code-runner/code-runner.router';
@@ -30,6 +31,12 @@ registerOrderRoutes(server);
 
 const start = async () => {
   try {
+    await server.register(cors, {
+      origin: '*',
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      allowedHeaders: ['Content-Type'],
+    });
+
     await server.listen({ host: '0.0.0.0', port: 3000 });
 
     const address = server.server.address();
