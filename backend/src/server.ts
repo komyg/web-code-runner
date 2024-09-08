@@ -2,7 +2,7 @@ import 'dotenv/config';
 import cors from '@fastify/cors';
 import Fastify, { FastifyInstance, RouteShorthandOptions } from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
-import { registerOrderRoutes } from './router/router';
+import { registerRoutes } from './router/router';
 
 const server: FastifyInstance = Fastify({});
 
@@ -25,7 +25,7 @@ server.get('/', opts, async (request, reply) => {
   return { healthy: true };
 });
 
-registerOrderRoutes(server);
+registerRoutes(server);
 
 const start = async () => {
   try {

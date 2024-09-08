@@ -1,23 +1,35 @@
-import { parseISO } from 'date-fns';
+import { parseISO, subHours } from 'date-fns';
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { getOrderStatistics } from '../services/load-balancer/load-balancer.service';
-import { getServiceInstanceData } from '../services/railway/railway.service';
 
-export async function getServiceData(
-  request: FastifyRequest,
-  reply: FastifyReply
-) {
-  const serviceId = (request.query as any).serviceId;
-  const data = await getServiceInstanceData(serviceId);
-  reply.send(data);
+export const getOrderStatsSchema = {
+  schema: {
+    querystring: {
+      type: 'object',
+      properties: {
+        startDate: { type: 'string' },
+        endDate: { type: 'string' },
+      },
+    },
+  },
+};
+
+export interface GetOrderStatsQueryParams {
+  startDate: string;
+  endDate: string;
 }
 
 export async function getOrderStats(
-  request: FastifyRequest,
+  request: FastifyRequest<{ Querystring: GetOrderStatsQueryParams }>,
   reply: FastifyReply
 ) {
-  const startDate = parseISO((request.query as any).startDate);
-  const endDate = parseISO((request.query as any).endDate);
+  const endDate = request.query.endDate
+    ? parseISO(request.query.endDate)
+    : new Date();
+  const startDate = request.query.startDate
+    ? parseISO(request.query.startDate)
+    : subHours(endDate, 1);
+
   const data = await getOrderStatistics(startDate, endDate);
   reply.send(data);
 }
