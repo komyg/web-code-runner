@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { SummarizedOrderRequestData } from './types';
 
 export function useGetOrdersStatistics() {
-  const [data, setData] = useState<SummarizedOrderRequestData | undefined>();
+  const [data, setData] = useState<SummarizedOrderRequestData[]>([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
