@@ -2,7 +2,12 @@ import { FastifyInstance } from 'fastify';
 import { getOrderStats } from '../controllers/orders.controller';
 import {
   getServiceData,
+  GetServiceDataParams,
   getServiceDataSchema,
+  patchService,
+  PatchServiceBody,
+  PatchServiceParams,
+  patchServiceSchema,
 } from '../controllers/railway-services.controller';
 
 export function registerRoutes(fastify: FastifyInstance) {
@@ -15,9 +20,14 @@ function registerOrderRoutes(fastify: FastifyInstance) {
 }
 
 function railwayServicesRoutes(fastify: FastifyInstance) {
-  fastify.get(
+  fastify.get<{ Params: GetServiceDataParams }>(
     '/service/:serviceId',
     getServiceDataSchema,
-    getServiceData as any
+    getServiceData
+  );
+  fastify.patch<{ Params: PatchServiceParams; Body: PatchServiceBody }>(
+    '/service/:serviceId',
+    patchServiceSchema,
+    patchService
   );
 }
