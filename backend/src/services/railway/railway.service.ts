@@ -1,5 +1,5 @@
 import { gql } from '@urql/core';
-import { railwayClient } from './client';
+import { railwayClient } from './railway.client';
 
 const RAILWAY_URL = process.env.RAILWAY_URL;
 
@@ -53,5 +53,40 @@ export async function updateNumReplicas(
 
   return railwayClient
     .mutation(document, { numReplicas, serviceId })
+    .toPromise();
+}
+
+interface ServiceInstanceData {
+  serviceInstance: {
+    latestDeployment: {
+      createdAt: string;
+      status: string;
+      updatedAt: string;
+    };
+    numReplicas: number;
+    serviceName: string;
+  };
+}
+
+export async function getServiceInstanceData(serviceId: string) {
+  const document = gql`
+    query ServiceInstance($environmentId: String!, $serviceId: String!) {
+      serviceInstance(environmentId: $environmentId, serviceId: $serviceId) {
+        latestDeployment {
+          createdAt
+          status
+          updatedAt
+        }
+        numReplicas
+        serviceName
+      }
+    }
+  `;
+
+  return railwayClient
+    .query<ServiceInstanceData>(document, {
+      serviceId,
+      environmentId: process.env.RAILWAY_ENVIRONMENT,
+    })
     .toPromise();
 }

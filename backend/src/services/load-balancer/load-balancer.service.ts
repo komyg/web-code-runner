@@ -1,10 +1,10 @@
 import { add, getMinutes } from 'date-fns';
-import { getCreateOrderRequestStatistics } from '../client/load-balancer.client';
+import { getCreateOrderRequestStatistics } from './load-balancer.client';
 import {
   CreateOrderRequestData,
   SummarizedOrderRequestData,
-} from '../types/order.types';
-import { generateFiveMinuteIntervals } from '../common/generate-intervals';
+} from '../../types/order.types';
+import { generateFiveMinuteIntervals } from '../../common/generate-intervals';
 
 interface CreateOrderRequestDataWithInterval extends CreateOrderRequestData {
   startDate: Date;

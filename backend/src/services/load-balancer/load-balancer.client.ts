@@ -1,6 +1,6 @@
 import { add, addMilliseconds } from 'date-fns';
-import { CreateOrderRequestData } from '../types/order.types';
-import { generateFiveMinuteIntervals } from '../common/generate-intervals';
+import { CreateOrderRequestData } from '../../types/order.types';
+import { generateFiveMinuteIntervals } from '../../common/generate-intervals';
 
 export async function getCreateOrderRequestStatistics(
   startDate: Date,
