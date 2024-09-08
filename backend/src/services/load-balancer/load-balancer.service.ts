@@ -1,4 +1,4 @@
-import { add, getMinutes } from 'date-fns';
+import { add, getHours, getMilliseconds, getMinutes } from 'date-fns';
 import { getCreateOrderRequestStatistics } from './load-balancer.client';
 import {
   CreateOrderRequestData,
@@ -69,6 +69,8 @@ function aggregateData(
 }
 
 function getIntervalIndexForTimestamp(timestamp: Date) {
+  const currentHour = getHours(new Date());
+  const timestampHour = getHours(timestamp);
   const minutes = getMinutes(timestamp);
-  return Math.floor(minutes / 5);
+  return Math.floor(minutes / 5) + (currentHour - timestampHour);
 }
