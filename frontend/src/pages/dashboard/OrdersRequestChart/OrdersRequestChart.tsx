@@ -1,5 +1,11 @@
 import { Box, Typography } from '@mui/material';
-import { VictoryBar, VictoryChart, VictoryStack, VictoryTheme } from 'victory';
+import {
+  VictoryBar,
+  VictoryChart,
+  VictoryLegend,
+  VictoryStack,
+  VictoryTheme,
+} from 'victory';
 import { OrderStatistics } from './types';
 
 interface Props {
@@ -20,6 +26,17 @@ export function OrdersRequestChart({ ordersStatistics }: Props) {
         width={600}
         title="Order Requests"
       >
+        <VictoryLegend
+          orientation="horizontal"
+          data={[
+            { name: 'Successful', symbol: { fill: 'green' } },
+            { name: 'Failed', symbol: { fill: 'yellow' } },
+            { name: 'Server Error', symbol: { fill: 'red' } },
+            { name: 'Bad Gateway', symbol: { fill: 'purple' } },
+            { name: 'Service Unavailable', symbol: { fill: 'darkRed' } },
+            { name: 'Gateway Timeout', symbol: { fill: 'grey' } },
+          ]}
+        />
         <VictoryStack>
           <VictoryBar
             data={ordersStatistics}
@@ -49,7 +66,7 @@ export function OrdersRequestChart({ ordersStatistics }: Props) {
             data={ordersStatistics}
             x="time"
             y="serviceUnabailableRequests"
-            style={{ data: { fill: 'purple' } }}
+            style={{ data: { fill: 'darkRed' } }}
           />
           <VictoryBar
             data={ordersStatistics}
