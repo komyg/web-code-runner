@@ -9,7 +9,7 @@ export function useGetOrdersStatistics() {
   useEffect(() => {
     setLoading(true);
     const loadStatistics = async () => {
-      const url = `${import.meta.env.VITE_API_URL}/order/statistics?startDate=2024-09-07T15:00:00&endDate=2024-09-07T16:00:00`;
+      const url = `${import.meta.env.VITE_API_URL}/order/statistics`;
       const response = await fetch(url);
       const data: SummarizedOrderRequestData[] = await response.json();
       setData(

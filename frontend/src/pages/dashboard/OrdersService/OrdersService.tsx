@@ -1,6 +1,11 @@
 import { Box, Typography } from '@mui/material';
+import { ServiceData } from './types';
 
-export function OrdersService() {
+interface Props {
+  serviceData: ServiceData;
+}
+
+export function OrdersService({ serviceData }: Props) {
   return (
     <Box
       display="flex"
@@ -8,7 +13,7 @@ export function OrdersService() {
       alignContent="center"
       justifyContent="center"
     >
-      <Typography variant="h6">Orders Service</Typography>
+      <Typography variant="h6">{serviceData.serviceName}</Typography>
     </Box>
   );
 }

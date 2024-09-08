@@ -15,6 +15,17 @@ export const getServiceDataSchema: RouteShorthandOptions = {
         serviceId: { type: 'string' },
       },
     },
+    response: {
+      200: {
+        type: 'object',
+        properties: {
+          serviceId: { type: 'string' },
+          serviceName: { type: 'string' },
+          numReplicas: { type: 'number' },
+          status: { type: 'string' },
+        },
+      },
+    },
   },
 };
 
@@ -28,7 +39,14 @@ export async function getServiceData(
 ) {
   const { serviceId } = request.params;
   const result = await getServiceInstanceData(serviceId);
-  reply.send(result.data);
+  const responseBody = {
+    serviceId,
+    serviceName: result.data?.serviceInstance.serviceName,
+    numReplicas: result.data?.serviceInstance.numReplicas,
+    status: result.data?.serviceInstance.latestDeployment.status,
+  };
+
+  reply.send(responseBody);
 }
 
 export const patchServiceSchema: RouteShorthandOptions = {
