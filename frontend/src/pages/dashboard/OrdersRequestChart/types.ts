@@ -9,3 +9,7 @@ export interface SummarizedOrderRequestData {
   serviceUnabailableRequests: number; // 503
   gatewayTimeoutRequests: number; // 504
 }
+
+export interface OrderStatistics extends SummarizedOrderRequestData {
+  time: string;
+}

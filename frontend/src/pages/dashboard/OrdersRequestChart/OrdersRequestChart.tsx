@@ -13,7 +13,7 @@ export function OrdersRequestChart() {
         <Box>
           <Typography variant="h4">Order Requests</Typography>
           <VictoryChart theme={VictoryTheme.material}>
-            <VictoryBar data={data} x="startDate" y="successfulRequests" />
+            <VictoryBar data={data} x="time" y="successfulRequests" />
           </VictoryChart>
         </Box>
       )}
