@@ -4,7 +4,10 @@ import {
   CreateOrderRequestData,
   SummarizedOrderRequestData,
 } from '../../types/order.types';
-import { generateFiveMinuteIntervals } from '../../common/generate-intervals';
+import {
+  Interval,
+  generateFiveMinuteIntervals,
+} from '../../common/generate-intervals';
 
 interface CreateOrderRequestDataWithInterval extends CreateOrderRequestData {
   startDate: Date;
@@ -58,7 +61,10 @@ function aggregateData(
   );
 
   loadBalancerData.forEach((data: CreateOrderRequestData) => {
-    const intervalIndex = getIntervalIndexForTimestamp(data.timestamp);
+    const intervalIndex = getIntervalIndexForTimestamp(
+      data.timestamp,
+      intervals
+    );
     aggretatedData[intervalIndex].push({
       ...intervals[intervalIndex],
       ...data,
@@ -68,9 +74,9 @@ function aggregateData(
   return aggretatedData;
 }
 
-function getIntervalIndexForTimestamp(timestamp: Date) {
-  const currentHour = getHours(new Date());
-  const timestampHour = getHours(timestamp);
-  const minutes = getMinutes(timestamp);
-  return Math.floor(minutes / 5) + (currentHour - timestampHour);
+function getIntervalIndexForTimestamp(timestamp: Date, intervals: Interval[]) {
+  return intervals.findIndex(
+    (interval) =>
+      timestamp >= interval.startDate && timestamp < interval.endDate
+  );
 }

@@ -6,7 +6,15 @@ import {
   subMinutes,
 } from 'date-fns';
 
-export function generateFiveMinuteIntervals(startDate: Date, endDate: Date) {
+export interface Interval {
+  startDate: Date;
+  endDate: Date;
+}
+
+export function generateFiveMinuteIntervals(
+  startDate: Date,
+  endDate: Date
+): Interval[] {
   const intervals = [];
   let currentDate = subMinutes(startDate, getMinutes(startDate));
   currentDate = subMilliseconds(currentDate, getMilliseconds(currentDate));

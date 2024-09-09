@@ -22,8 +22,8 @@ const requestPerStatusCodes: RequestsPerStatusCodes = {
   successfulRequests: { min: 500, max: 700, statusCode: 201 },
   failedRequests: { min: 10, max: 15, statusCode: 400 },
   serverErrorRequests: { min: 0, max: 2, statusCode: 500 },
-  badGatewayRequests: { min: 0, max: 10, statusCode: 502 },
-  serviceUnabailableRequests: { min: 10, max: 300, statusCode: 503 },
+  badGatewayRequests: { min: 50, max: 100, statusCode: 502 },
+  serviceUnabailableRequests: { min: 50, max: 300, statusCode: 503 },
   gatewayTimeoutRequests: { min: 0, max: 0, statusCode: 504 },
 };
 
@@ -49,7 +49,7 @@ function genereateFakeRequests(
   type: RequestTypes
 ): CreateOrderRequestData[] {
   const { min, max } = requestPerStatusCodes[type];
-  const numRequests = createRandomRequests(min, max, index);
+  const numRequests = createRandomRequests(min, max, index, type);
   return Array.from({ length: numRequests }, () => {
     return {
       timestamp: createRandomDate(startDate),
@@ -58,9 +58,20 @@ function genereateFakeRequests(
   });
 }
 
-function createRandomRequests(min: number, max: number, index: number) {
-  const indexCorrection = (index + 1) / 10;
+function createRandomRequests(
+  min: number,
+  max: number,
+  index: number,
+  type: RequestTypes
+) {
+  if (
+    index < 15 &&
+    (type === 'serviceUnabailableRequests' || type === 'badGatewayRequests')
+  ) {
+    return 0;
+  }
 
+  const indexCorrection = (index + 1) / 10;
   const random = Math.random() * (max - min + 1) + min;
   const result = Math.ceil(random * indexCorrection);
   return result;

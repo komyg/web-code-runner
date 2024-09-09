@@ -12,6 +12,7 @@ export function useGetOrdersStatistics() {
       const url = `${import.meta.env.VITE_API_URL}/order/statistics`;
       const response = await fetch(url);
       const data: SummarizedOrderRequestData[] = await response.json();
+
       setData(
         data.map((data) => ({
           ...data,
