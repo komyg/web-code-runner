@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import { ServiceData } from './types';
 import { OrdersServiceForm } from './OrdersServiceForm';
+import { StartStopService } from './StartStopService';
 
 interface Props {
   serviceData: ServiceData;
@@ -15,6 +16,12 @@ export function OrdersService({ serviceData }: Props) {
       <OrdersServiceForm
         numReplicas={serviceData.numReplicas}
         serviceId={serviceData.serviceId}
+        serviceStatus={serviceData.status}
+      />
+      <StartStopService
+        serviceId={serviceData.serviceId}
+        serviceStatus={serviceData.status}
+        deploymentId={serviceData.deploymentId}
       />
     </Box>
   );

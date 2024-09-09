@@ -3,7 +3,7 @@ import { railwayClient } from './railway.client';
 
 const RAILWAY_URL = process.env.RAILWAY_URL;
 
-export async function deployRunnerInstance() {
+export async function deployService(serviceId: string) {
   const document = gql`
     mutation ServiceInstanceDeploy(
       $environmentId: String!
@@ -19,12 +19,12 @@ export async function deployRunnerInstance() {
   return railwayClient
     .mutation(document, {
       environmentId: process.env.RAILWAY_ENV,
-      serviceId: '2b3e5634-232c-47b1-ae91-553f3e0a3a98',
+      serviceId,
     })
     .toPromise();
 }
 
-export async function removeRunnerDeployment() {
+export async function removeServiceDeployment(deploymentId: string) {
   const document = gql`
     mutation DeploymentRemove($id: String!) {
       deploymentRemove(id: $id)
@@ -33,7 +33,7 @@ export async function removeRunnerDeployment() {
 
   return railwayClient
     .mutation(document, {
-      id: '45bf508c-6ebe-4ebd-b604-add368b4cff0',
+      id: deploymentId,
     })
     .toPromise();
 }
@@ -62,6 +62,7 @@ interface ServiceInstanceData {
       createdAt: string;
       status: string;
       updatedAt: string;
+      id: string;
     };
     numReplicas: number;
     serviceName: string;
@@ -76,6 +77,7 @@ export async function getServiceInstanceData(serviceId: string) {
           createdAt
           status
           updatedAt
+          id
         }
         numReplicas
         serviceName

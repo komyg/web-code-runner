@@ -8,6 +8,11 @@ import {
   PatchServiceBody,
   PatchServiceParams,
   patchServiceSchema,
+  startService,
+  StartStopServiceParam,
+  startServiceSchema,
+  stopService,
+  StopServiceBody,
 } from '../controllers/railway-services.controller';
 
 export function registerRoutes(fastify: FastifyInstance) {
@@ -25,9 +30,22 @@ function railwayServicesRoutes(fastify: FastifyInstance) {
     getServiceDataSchema,
     getServiceData
   );
+
   fastify.patch<{ Params: PatchServiceParams; Body: PatchServiceBody }>(
     '/service/:serviceId',
     patchServiceSchema,
     patchService
+  );
+
+  fastify.post<{ Params: StartStopServiceParam }>(
+    '/service/:serviceId/start',
+    startServiceSchema,
+    startService
+  );
+
+  fastify.post<{ Params: StartStopServiceParam; Body: StopServiceBody }>(
+    '/service/:serviceId/stop',
+    startServiceSchema,
+    stopService
   );
 }

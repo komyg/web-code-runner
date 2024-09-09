@@ -3,4 +3,5 @@ export interface ServiceData {
   serviceName: string;
   numReplicas: number;
   status: string;
+  deploymentId: string;
 }

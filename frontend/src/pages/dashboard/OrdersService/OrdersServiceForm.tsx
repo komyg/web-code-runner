@@ -6,6 +6,7 @@ import { useUpdateService } from './useUpdateService';
 interface Props {
   serviceId: string;
   numReplicas: number;
+  serviceStatus: string;
 }
 
 const validationSchema = yup.object({
@@ -15,7 +16,11 @@ const validationSchema = yup.object({
     .min(1, 'Number of replicas must be greater than 0'),
 });
 
-export function OrdersServiceForm({ numReplicas, serviceId }: Props) {
+export function OrdersServiceForm({
+  numReplicas,
+  serviceId,
+  serviceStatus,
+}: Props) {
   const formik = useFormik({
     initialValues: {
       numReplicas,
@@ -43,7 +48,11 @@ export function OrdersServiceForm({ numReplicas, serviceId }: Props) {
           }
           helperText={formik.touched.numReplicas && formik.errors.numReplicas}
         />
-        <Button type="submit" variant="contained" disabled={loading}>
+        <Button
+          type="submit"
+          variant="contained"
+          disabled={loading || serviceStatus !== 'SUCCESS'}
+        >
           Update
         </Button>
       </Box>

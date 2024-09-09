@@ -1,4 +1,4 @@
-import { add, addMilliseconds } from 'date-fns';
+import { add, addMilliseconds, interval } from 'date-fns';
 import { CreateOrderRequestData } from '../../types/order.types';
 import { generateFiveMinuteIntervals } from '../../common/generate-intervals';
 
@@ -37,7 +37,8 @@ export async function getCreateOrderRequestStatistics(
       genereateFakeRequests(
         intervalDate.startDate,
         index,
-        requestType as RequestTypes
+        requestType as RequestTypes,
+        intervals.length
       )
     )
   );
@@ -46,10 +47,17 @@ export async function getCreateOrderRequestStatistics(
 function genereateFakeRequests(
   startDate: Date,
   index: number,
-  type: RequestTypes
+  type: RequestTypes,
+  intervalLength: number
 ): CreateOrderRequestData[] {
   const { min, max } = requestPerStatusCodes[type];
-  const numRequests = createRandomRequests(min, max, index, type);
+  const numRequests = createRandomRequests(
+    min,
+    max,
+    index,
+    type,
+    intervalLength
+  );
   return Array.from({ length: numRequests }, () => {
     return {
       timestamp: createRandomDate(startDate),
@@ -62,10 +70,11 @@ function createRandomRequests(
   min: number,
   max: number,
   index: number,
-  type: RequestTypes
+  type: RequestTypes,
+  intervalLength: number
 ) {
   if (
-    index < 15 &&
+    index < intervalLength - 3 &&
     (type === 'serviceUnabailableRequests' || type === 'badGatewayRequests')
   ) {
     return 0;
