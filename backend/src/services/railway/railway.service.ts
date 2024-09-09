@@ -83,10 +83,14 @@ export async function getServiceInstanceData(serviceId: string) {
     }
   `;
 
-  return railwayClient
+  const query = await railwayClient
     .query<ServiceInstanceData>(document, {
       serviceId,
       environmentId: process.env.RAILWAY_ENVIRONMENT,
     })
     .toPromise();
+
+  console.log(query);
+
+  return query;
 }
