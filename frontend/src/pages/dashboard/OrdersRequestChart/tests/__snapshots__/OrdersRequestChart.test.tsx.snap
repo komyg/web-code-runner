@@ -1,0 +1,733 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-wkpw2c"
+  >
+    <h5
+      class="MuiTypography-root MuiTypography-h5 css-ku7d13-MuiTypography-root"
+    >
+      Order Requests
+    </h5>
+    <div
+      class="VictoryContainer"
+      style="height: 100%; width: 100%; user-select: none; pointer-events: none; position: relative;"
+    >
+      <svg
+        aria-labelledby="victory-container-1-title"
+        height="350"
+        role="img"
+        style="width: 100%; height: 100%; pointer-events: all;"
+        viewBox="0 0 1000 350"
+        width="1000"
+      >
+        <title
+          id="victory-container-1-title"
+        >
+          Order Requests
+        </title>
+        <g>
+          <rect
+            height="12"
+            role="presentation"
+            shape-rendering="auto"
+            style="fill: none;"
+            vector-effect="non-scaling-stroke"
+            width="160.8"
+            x="0"
+            y="0"
+          />
+          <path
+            d="M 12, 12
+      m -4.8, 0
+      a 4.8, 4.8 0 1,0 9.6,0
+      a 4.8, 4.8 0 1,0 -9.6,0"
+            role="presentation"
+            shape-rendering="auto"
+            style="fill: green;"
+          />
+          <path
+            d="M 38.8, 12
+      m -4.8, 0
+      a 4.8, 4.8 0 1,0 9.6,0
+      a 4.8, 4.8 0 1,0 -9.6,0"
+            role="presentation"
+            shape-rendering="auto"
+            style="fill: yellow;"
+          />
+          <path
+            d="M 65.6, 12
+      m -4.8, 0
+      a 4.8, 4.8 0 1,0 9.6,0
+      a 4.8, 4.8 0 1,0 -9.6,0"
+            role="presentation"
+            shape-rendering="auto"
+            style="fill: red;"
+          />
+          <path
+            d="M 92.4, 12
+      m -4.8, 0
+      a 4.8, 4.8 0 1,0 9.6,0
+      a 4.8, 4.8 0 1,0 -9.6,0"
+            role="presentation"
+            shape-rendering="auto"
+            style="fill: purple;"
+          />
+          <path
+            d="M 119.2, 12
+      m -4.8, 0
+      a 4.8, 4.8 0 1,0 9.6,0
+      a 4.8, 4.8 0 1,0 -9.6,0"
+            role="presentation"
+            shape-rendering="auto"
+            style="fill: darkRed;"
+          />
+          <path
+            d="M 146, 12
+      m -4.8, 0
+      a 4.8, 4.8 0 1,0 9.6,0
+      a 4.8, 4.8 0 1,0 -9.6,0"
+            role="presentation"
+            shape-rendering="auto"
+            style="fill: grey;"
+          />
+          <text
+            direction="inherit"
+            dx="0"
+            id="chart-legend-0-labels-0"
+            x="26.4"
+            y="16.259999999999998"
+          >
+            <tspan
+              dx="0"
+              dy="0"
+              style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+              text-anchor="start"
+              x="26.4"
+            >
+              Successful
+            </tspan>
+          </text>
+          <text
+            direction="inherit"
+            dx="0"
+            id="chart-legend-0-labels-1"
+            x="53.199999999999996"
+            y="16.259999999999998"
+          >
+            <tspan
+              dx="0"
+              dy="0"
+              style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+              text-anchor="start"
+              x="53.199999999999996"
+            >
+              Failed
+            </tspan>
+          </text>
+          <text
+            direction="inherit"
+            dx="0"
+            id="chart-legend-0-labels-2"
+            x="80"
+            y="16.259999999999998"
+          >
+            <tspan
+              dx="0"
+              dy="0"
+              style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+              text-anchor="start"
+              x="80"
+            >
+              Server Error
+            </tspan>
+          </text>
+          <text
+            direction="inherit"
+            dx="0"
+            id="chart-legend-0-labels-3"
+            x="106.80000000000001"
+            y="16.259999999999998"
+          >
+            <tspan
+              dx="0"
+              dy="0"
+              style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+              text-anchor="start"
+              x="106.80000000000001"
+            >
+              Bad Gateway
+            </tspan>
+          </text>
+          <text
+            direction="inherit"
+            dx="0"
+            id="chart-legend-0-labels-4"
+            x="133.6"
+            y="16.259999999999998"
+          >
+            <tspan
+              dx="0"
+              dy="0"
+              style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+              text-anchor="start"
+              x="133.6"
+            >
+              Service Unavailable
+            </tspan>
+          </text>
+          <text
+            direction="inherit"
+            dx="0"
+            id="chart-legend-0-labels-5"
+            x="160.4"
+            y="16.259999999999998"
+          >
+            <tspan
+              dx="0"
+              dy="0"
+              style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+              text-anchor="start"
+              x="160.4"
+            >
+              Gateway Timeout
+            </tspan>
+          </text>
+        </g>
+        <g>
+          <g
+            role="presentation"
+          >
+            <path
+              d="M -6.25, 234.2105263157895 
+A 0 0 0 0 1, -6.25, 234.2105263157895 
+L -6.25, 207.89473684210526 
+A 0 0 0 0 1, -6.25, 207.89473684210526 
+L 106.25, 207.89473684210526 
+A 0 0 0 0 1, 106.25, 207.89473684210526 
+L 106.25, 234.2105263157895 
+A 0 0 0 0 1, 106.25, 234.2105263157895 
+ z"
+              index="0"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: grey; stroke: grey; padding: 8px; stroke-width: 0;"
+            />
+            <path
+              d="M 893.75, 102.63157894736841 
+A 0 0 0 0 1, 893.75, 102.63157894736841 
+L 893.75, 50 
+A 0 0 0 0 1, 893.75, 50 
+L 1006.25, 50 
+A 0 0 0 0 1, 1006.25, 50 
+L 1006.25, 102.63157894736841 
+A 0 0 0 0 1, 1006.25, 102.63157894736841 
+ z"
+              index="1"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: grey; stroke: grey; padding: 8px; stroke-width: 0;"
+            />
+          </g>
+          <g
+            role="presentation"
+          >
+            <path
+              d="M -6.25, 256.140350877193 
+A 0 0 0 0 1, -6.25, 256.140350877193 
+L -6.25, 234.2105263157895 
+A 0 0 0 0 1, -6.25, 234.2105263157895 
+L 106.25, 234.2105263157895 
+A 0 0 0 0 1, 106.25, 234.2105263157895 
+L 106.25, 256.140350877193 
+A 0 0 0 0 1, 106.25, 256.140350877193 
+ z"
+              index="0"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: darkRed; stroke: darkRed; padding: 8px; stroke-width: 0;"
+            />
+            <path
+              d="M 893.75, 150.87719298245617 
+A 0 0 0 0 1, 893.75, 150.87719298245617 
+L 893.75, 102.63157894736841 
+A 0 0 0 0 1, 893.75, 102.63157894736841 
+L 1006.25, 102.63157894736841 
+A 0 0 0 0 1, 1006.25, 102.63157894736841 
+L 1006.25, 150.87719298245617 
+A 0 0 0 0 1, 1006.25, 150.87719298245617 
+ z"
+              index="1"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: darkRed; stroke: darkRed; padding: 8px; stroke-width: 0;"
+            />
+          </g>
+          <g
+            role="presentation"
+          >
+            <path
+              d="M -6.25, 273.6842105263158 
+A 0 0 0 0 1, -6.25, 273.6842105263158 
+L -6.25, 256.140350877193 
+A 0 0 0 0 1, -6.25, 256.140350877193 
+L 106.25, 256.140350877193 
+A 0 0 0 0 1, 106.25, 256.140350877193 
+L 106.25, 273.6842105263158 
+A 0 0 0 0 1, 106.25, 273.6842105263158 
+ z"
+              index="0"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: purple; stroke: purple; padding: 8px; stroke-width: 0;"
+            />
+            <path
+              d="M 893.75, 194.73684210526318 
+A 0 0 0 0 1, 893.75, 194.73684210526318 
+L 893.75, 150.87719298245617 
+A 0 0 0 0 1, 893.75, 150.87719298245617 
+L 1006.25, 150.87719298245617 
+A 0 0 0 0 1, 1006.25, 150.87719298245617 
+L 1006.25, 194.73684210526318 
+A 0 0 0 0 1, 1006.25, 194.73684210526318 
+ z"
+              index="1"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: purple; stroke: purple; padding: 8px; stroke-width: 0;"
+            />
+          </g>
+          <g
+            role="presentation"
+          >
+            <path
+              d="M -6.25, 286.8421052631579 
+A 0 0 0 0 1, -6.25, 286.8421052631579 
+L -6.25, 273.6842105263158 
+A 0 0 0 0 1, -6.25, 273.6842105263158 
+L 106.25, 273.6842105263158 
+A 0 0 0 0 1, 106.25, 273.6842105263158 
+L 106.25, 286.8421052631579 
+A 0 0 0 0 1, 106.25, 286.8421052631579 
+ z"
+              index="0"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: red; stroke: red; padding: 8px; stroke-width: 0;"
+            />
+            <path
+              d="M 893.75, 234.2105263157895 
+A 0 0 0 0 1, 893.75, 234.2105263157895 
+L 893.75, 194.73684210526318 
+A 0 0 0 0 1, 893.75, 194.73684210526318 
+L 1006.25, 194.73684210526318 
+A 0 0 0 0 1, 1006.25, 194.73684210526318 
+L 1006.25, 234.2105263157895 
+A 0 0 0 0 1, 1006.25, 234.2105263157895 
+ z"
+              index="1"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: red; stroke: red; padding: 8px; stroke-width: 0;"
+            />
+          </g>
+          <g
+            role="presentation"
+          >
+            <path
+              d="M -6.25, 295.6140350877193 
+A 0 0 0 0 1, -6.25, 295.6140350877193 
+L -6.25, 286.8421052631579 
+A 0 0 0 0 1, -6.25, 286.8421052631579 
+L 106.25, 286.8421052631579 
+A 0 0 0 0 1, 106.25, 286.8421052631579 
+L 106.25, 295.6140350877193 
+A 0 0 0 0 1, 106.25, 295.6140350877193 
+ z"
+              index="0"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: yellow; stroke: yellow; padding: 8px; stroke-width: 0;"
+            />
+            <path
+              d="M 893.75, 269.2982456140351 
+A 0 0 0 0 1, 893.75, 269.2982456140351 
+L 893.75, 234.2105263157895 
+A 0 0 0 0 1, 893.75, 234.2105263157895 
+L 1006.25, 234.2105263157895 
+A 0 0 0 0 1, 1006.25, 234.2105263157895 
+L 1006.25, 269.2982456140351 
+A 0 0 0 0 1, 1006.25, 269.2982456140351 
+ z"
+              index="1"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: yellow; stroke: yellow; padding: 8px; stroke-width: 0;"
+            />
+          </g>
+          <g
+            role="presentation"
+          >
+            <path
+              d="M -6.25, 300 
+A 0 0 0 0 1, -6.25, 300 
+L -6.25, 295.6140350877193 
+A 0 0 0 0 1, -6.25, 295.6140350877193 
+L 106.25, 295.6140350877193 
+A 0 0 0 0 1, 106.25, 295.6140350877193 
+L 106.25, 300 
+A 0 0 0 0 1, 106.25, 300 
+ z"
+              index="0"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: green; stroke: green; padding: 8px; stroke-width: 0;"
+            />
+            <path
+              d="M 893.75, 300 
+A 0 0 0 0 1, 893.75, 300 
+L 893.75, 269.2982456140351 
+A 0 0 0 0 1, 893.75, 269.2982456140351 
+L 1006.25, 269.2982456140351 
+A 0 0 0 0 1, 1006.25, 269.2982456140351 
+L 1006.25, 300 
+A 0 0 0 0 1, 1006.25, 300 
+ z"
+              index="1"
+              role="presentation"
+              shape-rendering="auto"
+              style="fill: green; stroke: green; padding: 8px; stroke-width: 0;"
+            />
+          </g>
+        </g>
+        <g
+          role="presentation"
+        >
+          <line
+            role="presentation"
+            shape-rendering="auto"
+            style="stroke: #90A4AE; fill: transparent; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"
+            vector-effect="non-scaling-stroke"
+            x1="50"
+            x2="950"
+            y1="300"
+            y2="300"
+          />
+          <g
+            role="presentation"
+          >
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #ECEFF1; fill: none; stroke-dasharray: 10, 5; stroke-linecap: round; stroke-linejoin: round; pointer-events: painted;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="50"
+              y1="300"
+              y2="50"
+            />
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #90A4AE; fill: transparent; size: 5px; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="50"
+              y1="300"
+              y2="305"
+            />
+            <text
+              direction="inherit"
+              dx="0"
+              id="chart-axis-2-tickLabels-0"
+              x="50"
+              y="323.26"
+            >
+              <tspan
+                dx="0"
+                dy="0"
+                style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+                text-anchor="middle"
+                x="50"
+              >
+                10:10
+              </tspan>
+            </text>
+          </g>
+          <g
+            role="presentation"
+          >
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #ECEFF1; fill: none; stroke-dasharray: 10, 5; stroke-linecap: round; stroke-linejoin: round; pointer-events: painted;"
+              vector-effect="non-scaling-stroke"
+              x1="950"
+              x2="950"
+              y1="300"
+              y2="50"
+            />
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #90A4AE; fill: transparent; size: 5px; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
+              vector-effect="non-scaling-stroke"
+              x1="950"
+              x2="950"
+              y1="300"
+              y2="305"
+            />
+            <text
+              direction="inherit"
+              dx="0"
+              id="chart-axis-2-tickLabels-1"
+              x="950"
+              y="323.26"
+            >
+              <tspan
+                dx="0"
+                dy="0"
+                style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+                text-anchor="middle"
+                x="950"
+              >
+                10:15
+              </tspan>
+            </text>
+          </g>
+        </g>
+        <g
+          role="presentation"
+        >
+          <line
+            role="presentation"
+            shape-rendering="auto"
+            style="stroke: #90A4AE; fill: transparent; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"
+            vector-effect="non-scaling-stroke"
+            x1="50"
+            x2="50"
+            y1="50"
+            y2="300"
+          />
+          <g
+            role="presentation"
+          >
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #ECEFF1; fill: none; stroke-dasharray: 10, 5; stroke-linecap: round; stroke-linejoin: round; pointer-events: painted;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="950"
+              y1="256.140350877193"
+              y2="256.140350877193"
+            />
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #90A4AE; fill: transparent; size: 5px; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="45"
+              y1="256.140350877193"
+              y2="256.140350877193"
+            />
+            <text
+              direction="inherit"
+              dx="0"
+              id="chart-axis-3-tickLabels-0"
+              x="37"
+              y="260.400350877193"
+            >
+              <tspan
+                dx="0"
+                dy="0"
+                style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+                text-anchor="end"
+                x="37"
+              >
+                10
+              </tspan>
+            </text>
+          </g>
+          <g
+            role="presentation"
+          >
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #ECEFF1; fill: none; stroke-dasharray: 10, 5; stroke-linecap: round; stroke-linejoin: round; pointer-events: painted;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="950"
+              y1="212.28070175438594"
+              y2="212.28070175438594"
+            />
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #90A4AE; fill: transparent; size: 5px; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="45"
+              y1="212.28070175438594"
+              y2="212.28070175438594"
+            />
+            <text
+              direction="inherit"
+              dx="0"
+              id="chart-axis-3-tickLabels-1"
+              x="37"
+              y="216.54070175438594"
+            >
+              <tspan
+                dx="0"
+                dy="0"
+                style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+                text-anchor="end"
+                x="37"
+              >
+                20
+              </tspan>
+            </text>
+          </g>
+          <g
+            role="presentation"
+          >
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #ECEFF1; fill: none; stroke-dasharray: 10, 5; stroke-linecap: round; stroke-linejoin: round; pointer-events: painted;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="950"
+              y1="168.42105263157896"
+              y2="168.42105263157896"
+            />
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #90A4AE; fill: transparent; size: 5px; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="45"
+              y1="168.42105263157896"
+              y2="168.42105263157896"
+            />
+            <text
+              direction="inherit"
+              dx="0"
+              id="chart-axis-3-tickLabels-2"
+              x="37"
+              y="172.68105263157895"
+            >
+              <tspan
+                dx="0"
+                dy="0"
+                style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+                text-anchor="end"
+                x="37"
+              >
+                30
+              </tspan>
+            </text>
+          </g>
+          <g
+            role="presentation"
+          >
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #ECEFF1; fill: none; stroke-dasharray: 10, 5; stroke-linecap: round; stroke-linejoin: round; pointer-events: painted;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="950"
+              y1="124.56140350877195"
+              y2="124.56140350877195"
+            />
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #90A4AE; fill: transparent; size: 5px; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="45"
+              y1="124.56140350877195"
+              y2="124.56140350877195"
+            />
+            <text
+              direction="inherit"
+              dx="0"
+              id="chart-axis-3-tickLabels-3"
+              x="37"
+              y="128.82140350877194"
+            >
+              <tspan
+                dx="0"
+                dy="0"
+                style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+                text-anchor="end"
+                x="37"
+              >
+                40
+              </tspan>
+            </text>
+          </g>
+          <g
+            role="presentation"
+          >
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #ECEFF1; fill: none; stroke-dasharray: 10, 5; stroke-linecap: round; stroke-linejoin: round; pointer-events: painted;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="950"
+              y1="80.70175438596493"
+              y2="80.70175438596493"
+            />
+            <line
+              role="presentation"
+              shape-rendering="auto"
+              style="stroke: #90A4AE; fill: transparent; size: 5px; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;"
+              vector-effect="non-scaling-stroke"
+              x1="50"
+              x2="45"
+              y1="80.70175438596493"
+              y2="80.70175438596493"
+            />
+            <text
+              direction="inherit"
+              dx="0"
+              id="chart-axis-3-tickLabels-4"
+              x="37"
+              y="84.96175438596494"
+            >
+              <tspan
+                dx="0"
+                dy="0"
+                style="font-family: 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 12px; letter-spacing: normal; padding: 8px; fill: #455A64; stroke: transparent; stroke-width: 0;"
+                text-anchor="end"
+                x="37"
+              >
+                50
+              </tspan>
+            </text>
+          </g>
+        </g>
+      </svg>
+      <div
+        style="width: 100%; height: 100%; z-index: 99; position: absolute; top: 0px; left: 0px;"
+      >
+        <svg
+          height="350"
+          style="width: 100%; height: 100%; overflow: visible;"
+          viewBox="0 0 1000 350"
+          width="1000"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

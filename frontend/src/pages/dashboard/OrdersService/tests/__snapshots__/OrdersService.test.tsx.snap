@@ -1,0 +1,73 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiBox-root css-yd8sa2"
+  >
+    <h6
+      class="MuiTypography-root MuiTypography-h6 css-8zgow4-MuiTypography-root"
+    >
+      fake-service
+    </h6>
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-1edfpdg-MuiTypography-root"
+    >
+      Service ID: fake-service-id
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-1edfpdg-MuiTypography-root"
+    >
+      Status: SUCCESS
+    </p>
+    <form>
+      <div
+        class="MuiBox-root css-yd8sa2"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-standard css-nmluci-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for="numReplicas"
+            id="numReplicas-label"
+          >
+            Number of Replicas
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl css-r5in8e-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1o3an4k-MuiInputBase-input-MuiInput-input"
+              id="numReplicas"
+              name="numReplicas"
+              type="text"
+              value="1"
+            />
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="submit"
+        >
+          Update
+        </button>
+      </div>
+    </form>
+    <div
+      class="MuiBox-root css-1bnxa12"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSecondary MuiButton-fullWidth css-od1n8g-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        Stop
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
