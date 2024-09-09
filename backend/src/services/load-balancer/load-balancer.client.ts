@@ -7,7 +7,7 @@ type RequestTypes =
   | 'failedRequests'
   | 'serverErrorRequests'
   | 'badGatewayRequests'
-  | 'serviceUnabailableRequests'
+  | 'serviceUnavailableRequests'
   | 'gatewayTimeoutRequests';
 
 interface RequestMinMax {
@@ -23,7 +23,7 @@ const requestPerStatusCodes: RequestsPerStatusCodes = {
   failedRequests: { min: 10, max: 15, statusCode: 400 },
   serverErrorRequests: { min: 0, max: 2, statusCode: 500 },
   badGatewayRequests: { min: 50, max: 100, statusCode: 502 },
-  serviceUnabailableRequests: { min: 50, max: 300, statusCode: 503 },
+  serviceUnavailableRequests: { min: 50, max: 300, statusCode: 503 },
   gatewayTimeoutRequests: { min: 0, max: 0, statusCode: 504 },
 };
 
@@ -75,7 +75,7 @@ function createRandomRequests(
 ) {
   if (
     index < intervalLength - 3 &&
-    (type === 'serviceUnabailableRequests' || type === 'badGatewayRequests')
+    (type === 'serviceUnavailableRequests' || type === 'badGatewayRequests')
   ) {
     return 0;
   }

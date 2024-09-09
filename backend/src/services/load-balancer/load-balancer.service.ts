@@ -43,7 +43,7 @@ function summarizeData(
       ).length,
       serverErrorRequests: data.filter((d) => d.statusCode === 500).length,
       badGatewayRequests: data.filter((d) => d.statusCode === 502).length,
-      serviceUnabailableRequests: data.filter((d) => d.statusCode === 503)
+      serviceUnavailableRequests: data.filter((d) => d.statusCode === 503)
         .length,
       gatewayTimeoutRequests: data.filter((d) => d.statusCode === 504).length,
     };

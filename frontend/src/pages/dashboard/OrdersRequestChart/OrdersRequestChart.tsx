@@ -65,7 +65,7 @@ export function OrdersRequestChart({ ordersStatistics }: Props) {
           <VictoryBar
             data={ordersStatistics}
             x="time"
-            y="serviceUnabailableRequests"
+            y="serviceUnavailableRequests"
             style={{ data: { fill: 'darkRed' } }}
           />
           <VictoryBar

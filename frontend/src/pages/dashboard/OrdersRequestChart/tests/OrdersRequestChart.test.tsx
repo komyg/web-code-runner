@@ -15,7 +15,7 @@ it('should match the snapshot', () => {
       failedRequests: 2,
       serverErrorRequests: 3,
       badGatewayRequests: 4,
-      serviceUnabailableRequests: 5,
+      serviceUnavailableRequests: 5,
       gatewayTimeoutRequests: 6,
     },
     {
@@ -27,7 +27,7 @@ it('should match the snapshot', () => {
       failedRequests: 8,
       serverErrorRequests: 9,
       badGatewayRequests: 10,
-      serviceUnabailableRequests: 11,
+      serviceUnavailableRequests: 11,
       gatewayTimeoutRequests: 12,
     },
   ];

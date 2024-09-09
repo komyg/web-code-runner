@@ -11,6 +11,6 @@ export interface SummarizedOrderRequestData {
   failedRequests: number; // 4XX
   serverErrorRequests: number; // 500
   badGatewayRequests: number; // 502
-  serviceUnabailableRequests: number; // 503
+  serviceUnavailableRequests: number; // 503
   gatewayTimeoutRequests: number; // 504
 }
