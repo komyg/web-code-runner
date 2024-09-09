@@ -14,7 +14,7 @@ You can deploy a new version of this demo by pushing to the `main` branch.
 
 The frontend is a React single page application that retrives data from the backend and displays it in a dashboard.
 
-It provides these main functionalities:
+It provides these functionalities:
 
 - Review the load balancer statistics for a fictional service.
 - Start and stop this fictional service.
@@ -25,10 +25,10 @@ It provides these main functionalities:
 The backend is a Fastify server that exposes the following endpoints:
 
 - `GET /order/statistics`: Generate load balancer data for a fictional service.
-- `GET /service/:serviceId`: Returns the status of the service with the given `serviceId`.
-- `POST /service/:serviceId/start`: Starts the service with the given `serviceId`.
-- `POST /service/:serviceId/stop`: Stops a given deployment for the service with the given `serviceId`.
-- `PATCH /service/:serviceId`: Updates the number of replicas for the service with the given `serviceId`.
+- `GET /service/:serviceId`: Returns the status of a service with the given `serviceId`.
+- `POST /service/:serviceId/start`: Starts a service with the given `serviceId`.
+- `POST /service/:serviceId/stop`: Stops a deployment a the service with the given `serviceId`.
+- `PATCH /service/:serviceId`: Updates the number of replicas for a service with the given `serviceId`.
 
 ## Development
 
@@ -68,7 +68,7 @@ npm test
 
 There are many improvements that can be to this demo, for example:
 
-- When we made any changes to the service in the frontend, we don't poll or reload the data from the backend, which means that the user has to reload the page to see the actual results.
+- When we make any changes to the service in the frontend, we don't poll or reload the data from the backend, which means that the user has to reload the page to see the actual results.
 - Add better feedback to the user when they make changes to the service, such as adding toasts or alerts with success or error messages.
 - Update the monorepo so that the backend and frontend can share code.
 - The backend does not have any CORS policy, which is not secure.
