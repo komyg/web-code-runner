@@ -69,6 +69,7 @@ npm test
 There are many improvements that can be to this demo, for example:
 
 - When we made any changes to the service in the frontend, we don't poll or reload the data from the backend, which means that the user has to reload the page to see the actual results.
+- Add better feedback to the user when they make changes to the service, such as adding toasts or alerts with success or error messages.
 - Update the monorepo so that the backend and frontend can share code.
 - The backend does not have any CORS policy, which is not secure.
 - The backend does not have any authentication or authorization.
