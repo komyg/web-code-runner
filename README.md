@@ -56,10 +56,21 @@ npm install
 npm run dev
 ```
 
+## Testing
+
+You can run the backend and frontend by running the following command in their respective folders:
+
+```bash
+npm test
+```
+
 ## Improvements
 
 There are many improvements that can be to this demo, for example:
 
 - When we made any changes to the service in the frontend, we don't poll or reload the data from the backend, which means that the user has to reload the page to see the actual results.
+- Update the monorepo, so that the backend and frontend can share code.
 - The backend does not have any CORS policy, which is not secure.
 - The backend does not have any authentication or authorization.
+- Add more comprehensive tests.
+- Add CI/CD pipeline.
