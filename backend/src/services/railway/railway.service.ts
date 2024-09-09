@@ -18,7 +18,7 @@ export async function deployRunnerInstance() {
 
   return railwayClient
     .mutation(document, {
-      environmentId: process.env.RAILWAY_ENVIRONMENT,
+      environmentId: process.env.RAILWAY_ENV,
       serviceId: '2b3e5634-232c-47b1-ae91-553f3e0a3a98',
     })
     .toPromise();
@@ -83,14 +83,10 @@ export async function getServiceInstanceData(serviceId: string) {
     }
   `;
 
-  const query = await railwayClient
+  return railwayClient
     .query<ServiceInstanceData>(document, {
       serviceId,
-      environmentId: process.env.RAILWAY_ENVIRONMENT,
+      environmentId: process.env.RAILWAY_ENV,
     })
     .toPromise();
-
-  console.log(query);
-
-  return query;
 }
