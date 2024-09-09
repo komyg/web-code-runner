@@ -1,5 +1,6 @@
-import { describe, it, beforeEach, expect } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { buildApp } from '../../app';
+
 describe('/', () => {
   it('should return healthcheck', async () => {
     const app = buildApp();
