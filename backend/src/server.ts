@@ -6,25 +6,6 @@ import { registerRoutes } from './router/router';
 
 const server: FastifyInstance = Fastify({});
 
-const opts: RouteShorthandOptions = {
-  schema: {
-    response: {
-      200: {
-        type: 'object',
-        properties: {
-          healthy: {
-            type: 'boolean',
-          },
-        },
-      },
-    },
-  },
-};
-
-server.get('/', opts, async (request, reply) => {
-  return { healthy: true };
-});
-
 registerRoutes(server);
 
 const start = async () => {

@@ -14,10 +14,19 @@ import {
   stopService,
   StopServiceBody,
 } from '../controllers/railway-services.controller';
+import {
+  healthcheck,
+  healthcheckSchema,
+} from '../controllers/healthcheck.controller';
 
 export function registerRoutes(fastify: FastifyInstance) {
+  registerHealthcheckRoutes(fastify);
   registerOrderRoutes(fastify);
   railwayServicesRoutes(fastify);
+}
+
+function registerHealthcheckRoutes(fastify: FastifyInstance) {
+  fastify.get('/', healthcheckSchema, healthcheck);
 }
 
 function registerOrderRoutes(fastify: FastifyInstance) {
