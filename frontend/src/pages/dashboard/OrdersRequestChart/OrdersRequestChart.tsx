@@ -23,7 +23,7 @@ export function OrdersRequestChart({ ordersStatistics }: Props) {
       <Typography variant="h5">Order Requests</Typography>
       <VictoryChart
         theme={VictoryTheme.material}
-        width={800}
+        width={1000}
         title="Order Requests"
       >
         <VictoryLegend
