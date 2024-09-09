@@ -12,19 +12,24 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.9.0",
     "@types/node": "^22.5.4",
     "@typescript-eslint/eslint-plugin": "^8.4.0",
     "@typescript-eslint/parser": "^8.4.0",
-    "nodemon": "^3.1.4",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.4",
-    "@eslint/js": "^9.9.0",
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
-    "typescript-eslint": "^8.0.1",
-    "prettier": "^3.3.3"
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.1"
   },
   "dependencies": {
-    "fastify": "^4.28.1"
+    "@fastify/cors": "^9.0.1",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "graphql": "^16.9.0",
+    "urql": "^4.1.0"
   }
 }

@@ -1,5 +1,8 @@
+import 'dotenv/config';
+import cors from '@fastify/cors';
 import Fastify, { FastifyInstance, RouteShorthandOptions } from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
+import { registerRoutes } from './router/router';
 
 const server: FastifyInstance = Fastify({});
 
@@ -22,8 +25,16 @@ server.get('/', opts, async (request, reply) => {
   return { healthy: true };
 });
 
+registerRoutes(server);
+
 const start = async () => {
   try {
+    await server.register(cors, {
+      origin: '*',
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+      allowedHeaders: ['Content-Type'],
+    });
+
     await server.listen({ host: '0.0.0.0', port: 3000 });
 
     const address = server.server.address();
