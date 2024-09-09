@@ -1,49 +1,25 @@
-import 'dotenv/config';
 import cors from '@fastify/cors';
-import Fastify, { FastifyInstance, RouteShorthandOptions } from 'fastify';
-import { Server, IncomingMessage, ServerResponse } from 'http';
-import { registerRoutes } from './router/router';
+import 'dotenv/config';
+import { buildApp } from './app';
 
-const server: FastifyInstance = Fastify({});
-
-const opts: RouteShorthandOptions = {
-  schema: {
-    response: {
-      200: {
-        type: 'object',
-        properties: {
-          healthy: {
-            type: 'boolean',
-          },
-        },
-      },
-    },
-  },
-};
-
-server.get('/', opts, async (request, reply) => {
-  return { healthy: true };
-});
-
-registerRoutes(server);
-
-const start = async () => {
+async function start() {
+  const app = buildApp();
   try {
-    await server.register(cors, {
+    await app.register(cors, {
       origin: '*',
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
       allowedHeaders: ['Content-Type'],
     });
 
-    await server.listen({ host: '0.0.0.0', port: 3000 });
+    await app.listen({ host: '0.0.0.0', port: 3000 });
 
-    const address = server.server.address();
+    const address = app.server.address();
     const port = typeof address === 'string' ? address : address?.port;
   } catch (err) {
-    server.log.error(err);
+    app.log.error(err);
     process.exit(1);
   }
-};
+}
 
 start();
 console.log('Server is listening on port 3000');
